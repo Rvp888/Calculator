@@ -5,47 +5,51 @@
 }
 
 body {
-    background-color:darkcyan;
+    /* background-color: sienna; */
+    background-image: url("https://th.bing.com/th/id/OIP.el-f8TBOh_n-SIyL1zAH8QHaEo?w=267&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7");
+    background-repeat: no-repeat;
+    background-size: 100% 150%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    margin: 200px 450px;
-    padding: 20px;
-    border-radius: 10px;
+    margin: 20vh auto;
+    padding: 1.25em;
+    border-radius: 0.6em;
     background-color:rgb(101, 99, 99);
-    box-shadow: 0 0 15px 0px black;
+    box-shadow: 0 0 1.25em 0.6em black;
 }
 
 .main-grid {
     display: grid;
-    grid-template-columns: repeat(6, 70px);
-    grid-template-rows: repeat(7,50px);
-    grid-column-gap: 12px;
-    grid-row-gap: 12px;
+    grid-template-columns: repeat(7, 4.375em);
+    grid-template-rows: repeat(7, 3.125em);
+    grid-column-gap: 0.75em;
+    grid-row-gap: 0.75em;
 }
 
 .display {
-    margin-bottom: 20px;
+    margin-bottom: 1em;
     grid-column: 1/8;
     grid-row: 1/3;
-    border: 1px solid black;
-    border-radius: 10px;
+    border: 0.3em solid rgb(55, 54, 54);
+    border-radius: 0.6em;
     background-color:lightgrey;
-    outline: 5px solid rgb(55, 54, 54);
-    box-shadow: 0 10px 5px rgb(60, 60, 60);
     display: flex;
     flex-direction: column;
     align-items:flex-end;
     justify-content: space-evenly;
-    padding: 10px;
+    padding: 0.6em;
 }
 
 button {
-    border-radius: 5px;
+    border-radius: 0.3em;
     border: none;
     background-color:rgba(0, 0, 0, 0.844);
     color: rgba(255, 255, 255, 0.668);
-    font-size: 25px;
+    font-size: 1.56rem;
 }
 
 button:hover {
@@ -56,10 +60,96 @@ button:hover {
 
 .previous-operand {
     color: rgb(85, 84, 84);
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .current-operand {
     color: black;
-    font-size: 35px;
+    font-size: 2.2rem;
+}
+
+
+
+
+
+/*================================ Responsive-Part =====================================================*/
+
+
+
+@media screen and (max-width: 540px) {
+
+    .container {
+        margin: 20vh 0;
+        padding: 0.8em;
+    }
+
+    .main-grid {
+        grid-template-columns: repeat(7, 3.5em);
+        grid-template-rows: repeat(7, 2.8em);
+        grid-column-gap: 0.4em;
+        grid-row-gap: 0.4em;
+    }
+
+    .display {
+        margin-bottom: 0.6em;
+    }
+
+    button {
+        font-size: 1.1rem;
+    }
+
+}
+
+
+@media screen and (max-width: 420px) {
+
+    .main-grid {
+        grid-template-columns: repeat(7, 2.5em);
+        grid-template-rows: repeat(7, 2em);
+        grid-column-gap: 0.35em;
+        grid-row-gap: 0.35em;
+    }
+
+    .display {
+        margin-bottom: 0.4em;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+}
+
+
+@media screen and (max-width: 360px) {
+
+    .main-grid {
+        grid-template-columns: repeat(7, 2.3em);
+        grid-template-rows: repeat(7, 1.8em);
+    }
+
+    button {
+        font-size: 0.8rem;
+    }
+
+}
+
+
+@media screen and (max-width: 280px) {
+
+    .container {
+        padding: 0.6em;
+    }
+
+    .main-grid {
+        grid-template-columns: repeat(7, 1.8em);
+        grid-template-rows: repeat(7, 1.4em);
+        grid-column-gap: 0.3em;
+        grid-row-gap: 0.3em;
+    }
+
+    button {
+        font-size: 0.7rem;
+    }
+
 }

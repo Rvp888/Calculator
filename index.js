@@ -265,9 +265,9 @@ document.addEventListener('keydown',(event) => {
     if(key === '=' || key === 'Enter'){compute(),updateDisplay(),currentOperand = ""; return};
   
     if(key === '-' && currentOperand === ""){
-      currentOperandTextElement.innerText = "-";
-      appendNumber("-");
-      return;
+        currentOperandDisplay.innerText = "-";
+        appendNumber("-");
+        return;
     }
   
     if(key === '*' || key === '+' || key === '-' || key === '%'){chooseOperation(key)};
