@@ -118,6 +118,14 @@ button:hover {
         font-size: 0.9rem;
     }
 
+    .previous-operand {
+        font-size: 1rem;
+    }
+    
+    .current-operand {
+        font-size: 1.6rem;
+    }
+
 }
 
 
@@ -152,4 +160,11 @@ button:hover {
         font-size: 0.7rem;
     }
 
+    .previous-operand {
+        font-size: 0.8rem;
+    }
+    
+    .current-operand {
+        font-size: 1.2rem;
+    }
 }
